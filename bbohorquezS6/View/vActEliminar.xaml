@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bbohorquezS6.View.vActEliminar"
+             Title="OPCIONES ESTUDIANTE">
+    <VerticalStackLayout Spacing="20">
+        
+            <Label 
+            Text="INFORMACIÓN ESTUDIANTE"
+            VerticalOptions="Center" 
+            FontSize="22"
+            HorizontalOptions="Center" />
+                
+        <StackLayout>
+            <Label Text="Id:" Margin="20,0,0,0" TextColor="DarkGray"/>
+            <Entry x:Name="txtCodigo"
+                   IsReadOnly="True"/>
+            <Label Text="Nombre:" Margin="20,0,0,0" TextColor="DarkGray"/>
+            <Entry x:Name="txtNombre" Placeholder="Ingrese el nombre"
+                   />
+            <Label Text="Apellido:" Margin="20,0,0,0" TextColor="DarkGray"/>
+            <Entry x:Name="txtApellido" Placeholder="Ingrese el apellido"
+                   />
+            <Label Text="Edad:" Margin="20,0,0,0" TextColor="DarkGray"/>
+            <Entry x:Name="txtEdad" Placeholder="Ingrese la edad" 
+                   />
+
+            <Button x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked" BackgroundColor="LightSlateGray" Margin="150,20,150,0"/>
+
+            <Button x:Name="btnEliminar" Text="Eliminar" Clicked="btnEliminar_Clicked" BackgroundColor="IndianRed" Margin="150,20,150,0"/>
+
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

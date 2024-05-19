@@ -2,12 +2,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="bbohorquezS6.View.vEstudiante"
-             Title="vEstudiante"
+             Title="ESTUDIANTES"
              >
     <VerticalStackLayout Spacing="10">
         <Frame>
             <Label 
-            Text="Consumo APIrest"
+            Text=""
             VerticalOptions="Center" 
             HorizontalOptions="Center" 
             FontSize="22"/>
@@ -16,7 +16,7 @@
             Text="Lista de Estudiantes "
             VerticalOptions="Center" 
             HorizontalOptions="Center" 
-            FontSize="20"
+            FontSize="22"
             TextColor="DarkSlateBlue"/>
        
         <StackLayout>
@@ -36,11 +36,11 @@
                 <Label Text="Edad" Grid.Row="0" Grid.Column="3" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="Black" TextColor="WhiteSmoke" />
             </Grid>
             <ScrollView>
-                <CollectionView x:Name="listEstudiantes" ItemsSource="{Binding listaEstudiantes}">
+                <CollectionView x:Name="listEstudiantes" ItemsSource="{Binding listaEstudiantes}" SelectionMode="Single" SelectionChanged="listEstudiantes_SelectionChanged">
                     <CollectionView.ItemsLayout>
                         <LinearItemsLayout Orientation="Vertical" />
                     </CollectionView.ItemsLayout>
-                        <CollectionView.ItemTemplate>
+                        <CollectionView.ItemTemplate >
                             <DataTemplate>
                                 <Grid>
                                 
@@ -59,8 +59,10 @@
                                 </Grid>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
-                    </CollectionView>    
+                    </CollectionView>
+                
             </ScrollView>
+            <Button x:Name="btnAgregar" Text="Agregar Estudiante" Clicked="btnAgregar_Clicked" BackgroundColor="DarkGreen" Margin="150,20,150,0"/>
         </StackLayout>
     </VerticalStackLayout>
 </ContentPage>
